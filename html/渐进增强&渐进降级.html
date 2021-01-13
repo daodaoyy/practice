@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>渐进增强和渐进降级</title>
+  <style>
+    .box1 {
+      width: 300px;
+      height: 60px;
+      text-align: center;
+      border: 2px solid blue;
+      -webkit-border-radius: 30px 10px;
+      -moz-border-radius: 30px 10px;
+      border-radius: 30px 10px; 
+      margin-bottom: 100px;
+    }
+    .box2 {
+      width: 300px;
+      height: 60px;
+      text-align: center;
+      border: 2px solid blue;
+      border-radius: 30px 10px; 
+      -webkit-border-radius: 30px 10px;
+      -moz-border-radius: 30px 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box1">渐进增强</div>
+  <div class="box2">渐进降级</div>
+</body>
+</html>
