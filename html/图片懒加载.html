@@ -32,7 +32,7 @@
   // onload是等所有的资源文件加载完毕以后再绑定事件
 window.onload = function(){
 	// 获取图片列表，即img标签列表
-	var imgs = document.querySelectorAll('img');
+	let imgs = document.querySelectorAll('img');
 
 	// 获取到浏览器顶部的距离
 	function getTop(e){
@@ -43,12 +43,12 @@ window.onload = function(){
 	// 懒加载实现
 	function lazyload(imgs){
 		// 可视区域高度
-		var h = window.innerHeight;
+		let h = window.innerHeight;
     console.log('h---', h)
 		//滚动区域高度
-		var s = document.documentElement.scrollTop || document.body.scrollTop;
+		let s = document.documentElement.scrollTop || document.body.scrollTop;
     console.log('s----', document.documentElement.scrollTop, document.body.scrollTop, s)
-		for(var i=0;i<imgs.length;i++){
+		for(let i=0;i<imgs.length;i++){
 			//图片距离顶部的距离小于可视区域和滚动区域之和时懒加载
 			if ((h+s)>getTop(imgs[i])) {
 				// 真实情况是页面开始有2秒空白，所以使用setTimeout定时2s
@@ -57,7 +57,7 @@ window.onload = function(){
 						// 不加立即执行函数i会等于9
 						// 隐形加载图片或其他资源，
 						// 创建一个临时图片，这个图片在内存中不会到页面上去。实现隐形加载
-						var temp = new Image();
+						let temp = new Image();
 						temp.src = imgs[i].getAttribute('data-src');//只会请求一次
 						// onload判断图片加载完毕，真实图片加载完毕，再赋值给dom节点
 						temp.onload = function(){
