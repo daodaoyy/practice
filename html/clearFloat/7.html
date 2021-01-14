@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>父级div定义display:table</title>
+  <style type="text/css"> 
+    .div1{background:green;border:1px solid red;/*解决代码*/width:98%;display:block;margin-bottom:10px;}
+    .div2{background:blue;border:1px solid red;height:100px;width:98%;}
+
+    .left{float:left;width:20%;height:200px;background:#DDD}
+    .right{float:right;width:30%;height:80px;background:#DDD}
+
+  </style> 
+</head>
+<body>
+  <div class="div1"> 
+    <div class="left">Left</div> 
+    <div class="right">Right</div>
+  </div>
+  <div class="div2">
+        div2
+  </div>
+
+<!-- 原理：将div属性变成表格
+
+优点：没有优点
+
+缺点：会产生新的未知问题
+
+建议：不推荐使用，只作了解 -->
+</body>
+</html>

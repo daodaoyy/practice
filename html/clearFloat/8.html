@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>结尾处加br标签clear:both</title>
+  <style type="text/css"> 
+    .div1{background:green;border:1px solid red;zoom:1;margin-bottom:10px;}
+    .div2{background:blue;border:1px solid red;height:100px;}
+
+    .left{float:left;width:20%;height:200px;background:#DDD}
+    .right{float:right;width:30%;height:80px;background:#DDD}
+
+    .clearfloat{clear:both}
+  </style> 
+</head>
+<body>
+  <div class="div1"> 
+    <div class="left">Left</div> 
+    <div class="right">Right</div>
+    <br class="clearfloat" />
+  </div>
+  <div class="div2">
+        div2
+  </div>
+
+<!-- 原理：父级div定义zoom:1来解决IE浮动问题，结尾处加br标签clear:both
+
+建议：不推荐使用，只作了解 -->
+</body>
+</html>
